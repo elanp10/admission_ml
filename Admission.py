@@ -22,7 +22,7 @@ st.image('admission.jpg', use_column_width = True,
 
 password_guess = st.text_input("What is the Password?")
 if password_guess != st.secrets["password"]:
-st.stop()
+    st.stop()
 
 st.write("This app uses multiple inputs to predict the probability of admission to graduate school.") 
 
