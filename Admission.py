@@ -8,7 +8,6 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-
 # Set up the app title and image
 st.title('Graduate Admission Predictor 🌟')
 st.image('admission.jpg', use_column_width = True, 
@@ -20,11 +19,12 @@ st.image('admission.jpg', use_column_width = True,
 # screen sizes and layouts, ensuring it scales nicely without needing to 
 # specify exact pixel dimensions.
 
+st.write("This app uses multiple inputs to predict the probability of admission to graduate school.") 
+
+
 password_guess = st.text_input("What is the Password?")
 if password_guess != st.secrets["password"]:
     st.stop()
-
-st.write("This app uses multiple inputs to predict the probability of admission to graduate school.") 
 
 # Reading the pickle file that we created before 
 model_pickle = open('reg_admission.pickle', 'rb') 
